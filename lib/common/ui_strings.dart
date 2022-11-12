@@ -7,7 +7,7 @@ class UIStrings {
   // App
   // -----------------------------------------------------------------------------------------------
 
-  static const String appName = 'Random Color Tester';
+  static const String appName = 'Flutter Random Color Tester';
 
   // -----------------------------------------------------------------------------------------------
   // Home Screen

@@ -43,11 +43,7 @@ class ColorsScreen extends StatelessWidget {
         );
       },
       separatorBuilder: (BuildContext context, int index) {
-        return Divider(
-          color: Theme.of(context).colorScheme.primary,
-          thickness: 8.0,
-          height: 8.0,
-        );
+        return Container(color: Theme.of(context).colorScheme.primary, height: 8.0);
       },
     );
   }

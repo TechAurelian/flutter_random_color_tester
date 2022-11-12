@@ -17,24 +17,22 @@ class OptionsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double hPadding = MediaQuery.of(context).size.width / 10;
-    return Container(
-      color: Colors.black12,
-      child: Column(
-        children: [
-          if (title != null)
-            Padding(
-              padding: EdgeInsets.only(left: hPadding, right: hPadding, top: 32.0),
-              child: Text(title!, style: Theme.of(context).textTheme.headline6),
-            ),
-          if (child != null)
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: hPadding, vertical: 32.0),
-              child: child!,
-            ),
-          Divider(color: Theme.of(context).colorScheme.primary, thickness: 8.0, height: 8.0),
-        ],
-      ),
+    const double pad = 40.0;
+    return Column(
+      children: [
+        if (title != null)
+          Padding(
+            padding: const EdgeInsets.only(left: pad, right: pad, top: pad),
+            child: Text(title!, style: Theme.of(context).textTheme.headline6),
+          ),
+        if (child != null)
+          Container(
+            constraints: const BoxConstraints(maxWidth: 600.0),
+            padding: const EdgeInsets.all(pad),
+            child: child!,
+          ),
+        Container(color: Theme.of(context).colorScheme.primary, height: 8.0),
+      ],
     );
   }
 }

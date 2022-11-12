@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       appBar: AppBar(
         title: const Text(UIStrings.appName),
         actions: [
@@ -60,11 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: _buildBody(),
+      body: _buildOptions(),
     );
   }
 
-  Widget _buildBody() {
+  Widget _buildOptions() {
     return ListView(
       children: [
         OptionsContainer(
@@ -92,7 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
           title: UIStrings.colorTypeSubtitle,
           child: Wrap(
             spacing: 8.0,
-            alignment: WrapAlignment.spaceBetween,
+            runSpacing: 8.0,
+            alignment: WrapAlignment.center,
             children: [
               _buildColorTypeChip(ColorType.random),
               _buildColorTypeChip(ColorType.red),
