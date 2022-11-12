@@ -16,24 +16,23 @@ class FlutterRandomColorTester extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final Color appPrimaryColor = Colors.grey.shade700;
+    const Color appPrimaryColor = Colors.black;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: UIStrings.appName,
       theme: ThemeData(
-          brightness: Brightness.light,
-          colorScheme: const ColorScheme.light(
-            primary: Colors.black,
-            secondary: Colors.black,
-            onSecondary: Colors.white,
-          ),
-          chipTheme: ChipTheme.of(context).copyWith(
-            secondarySelectedColor: Colors.black,
-            secondaryLabelStyle: const TextStyle(color: Colors.white),
-          )),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        colorScheme: const ColorScheme.dark(
-          primary: Colors.black,
+        brightness: Brightness.light,
+        colorScheme: const ColorScheme.light(
+          primary: appPrimaryColor,
+          onPrimary: Colors.white,
+          secondary: appPrimaryColor,
+          onSecondary: Colors.white,
+        ),
+        chipTheme: ChipTheme.of(context).copyWith(
+          secondarySelectedColor: appPrimaryColor,
+          secondaryLabelStyle: const TextStyle(color: Colors.white),
         ),
       ),
       home: const HomeScreen(),

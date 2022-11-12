@@ -25,21 +25,19 @@ class ColorListItem extends StatelessWidget {
     final Color contrastColor = ColorUtils.contrastColor(color);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: EdgeInsets.zero,
       child: ListTile(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
-        ),
         contentPadding: const EdgeInsets.all(64.0),
         tileColor: color,
         title: Text(
           index.toString(),
-          style:
-              Theme.of(context).textTheme.overline!.copyWith(color: contrastColor.withOpacity(0.5)),
+          style: Theme.of(context).textTheme.overline!.copyWith(
+                color: contrastColor.withOpacity(0.5),
+              ),
         ),
         subtitle: Text(
           ColorUtils.toHex(color),
-          style: Theme.of(context).textTheme.bodyText1!.copyWith(color: contrastColor),
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(color: contrastColor),
         ),
         onTap: onTap,
       ),

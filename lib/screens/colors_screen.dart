@@ -22,13 +22,12 @@ class ColorsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(UIStrings.colorsScreen(colors.length)),
       ),
-      body: _buildBody(),
+      body: _buildBody(context),
     );
   }
 
-  Widget _buildBody() {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16.0),
+  Widget _buildBody(BuildContext context) {
+    return ListView.separated(
       itemCount: colors.length,
       itemBuilder: (BuildContext context, int index) {
         final Color color = colors[index];
@@ -37,8 +36,17 @@ class ColorsScreen extends StatelessWidget {
           color: color,
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => ColorPreviewScreen(color: color)));
+              context,
+              MaterialPageRoute(builder: (context) => ColorPreviewScreen(color: color)),
+            );
           },
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return Divider(
+          color: Theme.of(context).colorScheme.primary,
+          thickness: 8.0,
+          height: 8.0,
         );
       },
     );

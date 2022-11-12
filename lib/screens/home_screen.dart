@@ -61,21 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: _buildBody(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton.extended(
-        icon: const Icon(Icons.color_lens_outlined),
-        label: const Text(UIStrings.generateButton),
-        onPressed: _generatePressed,
-      ),
     );
   }
 
   Widget _buildBody() {
     return ListView(
-      padding: const EdgeInsets.all(16.0),
       children: [
         OptionsContainer(
-          title: UIStrings.generateSubtitle,
           child: Column(
             children: [
               Text('${_colorCount.toInt()} color${_colorCount != 1 ? 's' : ''}'),
@@ -87,6 +79,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   setState(() => _colorCount = value);
                 },
               ),
+              const SizedBox(height: 16.0),
+              FloatingActionButton.extended(
+                icon: const Icon(Icons.color_lens_outlined),
+                label: const Text(UIStrings.generateButton),
+                onPressed: _generatePressed,
+              )
             ],
           ),
         ),
@@ -143,7 +141,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildLuminosityChip(Luminosity luminosity) {
     return ChoiceChip(
-      // selectedColor: Colors.black,
       label: Text(describeEnum(luminosity)),
       selected: _luminosity == luminosity,
       onSelected: (bool selected) {

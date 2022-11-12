@@ -16,7 +16,6 @@ class UIStrings {
   static const String helpTooltip = 'What is this app?';
   static const String helpUrl = 'https://github.com/TechAurelian/flutter_random_color_tester';
 
-  static const String generateSubtitle = 'Generate';
   static const String colorTypeSubtitle = 'Color Type';
   static const String luminositySubtitle = 'Luminosity';
 

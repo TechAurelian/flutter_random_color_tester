@@ -25,14 +25,9 @@ class ColorPreviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color contrastColor = ColorUtils.contrastColor(color);
-
     return Scaffold(
       backgroundColor: color,
       appBar: AppBar(
-        backgroundColor: color,
-        foregroundColor: contrastColor,
-        elevation: 0.0,
         title: Text(ColorUtils.toHex(color)),
         actions: [
           IconButton(
