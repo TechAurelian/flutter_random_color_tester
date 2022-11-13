@@ -2,7 +2,7 @@
 // Use of this source code is governed by an MIT-style license that can be
 // found in the LICENSE file.
 
-// cSpell:ignore flutter_randomcolor, fromRGBO
+// cSpell:ignore fromRGBO
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

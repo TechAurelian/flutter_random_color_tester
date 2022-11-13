@@ -1,7 +1,5 @@
-# cSpell:ignore flutter_randomcolor
-
 name: flutter_random_color_tester
-description: A basic Flutter project that tests the flutter_randomcolor Flutter Package.
+description: A Flutter project that tests the flutter_randomcolor Flutter package.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

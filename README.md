@@ -1,4 +1,4 @@
-# flutter_random_color_tester
+# Flutter Random Color Tester
 
 A new Flutter project.
 

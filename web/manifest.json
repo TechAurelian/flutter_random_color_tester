@@ -1,11 +1,11 @@
 {
-    "name": "flutter_random_color_tester",
-    "short_name": "flutter_random_color_tester",
+    "name": "Flutter Random Color Tester",
+    "short_name": "Flutter Random Color Tester",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "description": "A Flutter project that tests the flutter_randomcolor Flutter package.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
