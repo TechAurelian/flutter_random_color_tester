@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../utils/color_utils.dart';
+import '../utils/utils.dart' as utils;
 
 class ColorFilterChip extends StatelessWidget {
   const ColorFilterChip({
@@ -25,7 +25,7 @@ class ColorFilterChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color contrastColor = ColorUtils.contrastColor(color);
+    final Color contrastColor = utils.contrastColor(color);
 
     return FilterChip(
       visualDensity: VisualDensity.compact,

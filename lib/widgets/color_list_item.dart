@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../utils/color_utils.dart';
+import '../utils/utils.dart' as utils;
 
 class ColorListItem extends StatelessWidget {
   const ColorListItem({
@@ -22,7 +22,7 @@ class ColorListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color contrastColor = ColorUtils.contrastColor(color);
+    final Color contrastColor = utils.contrastColor(color);
 
     return Padding(
       padding: EdgeInsets.zero,
@@ -36,7 +36,7 @@ class ColorListItem extends StatelessWidget {
               ),
         ),
         subtitle: Text(
-          ColorUtils.toHex(color),
+          utils.colorToHex(color),
           style: Theme.of(context).textTheme.titleLarge!.copyWith(color: contrastColor),
         ),
         onTap: onTap,

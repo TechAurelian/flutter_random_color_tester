@@ -26,11 +26,13 @@ class UIStrings {
   // -----------------------------------------------------------------------------------------------
 
   static String colorsScreen(int count) => '$count Random Colors';
+  static const String copyColorListTooltip = 'Copy newline-delimited color codes to the clipboard';
+  static const String colorListCopiedSnackBar = 'Newline-delimited color codes copied to clipboard';
 
   // -----------------------------------------------------------------------------------------------
   // Color Preview Screen
   // -----------------------------------------------------------------------------------------------
 
-  static const String copyTooltip = 'Copy color code to clipboard';
-  static const String copiedSnackBar = 'Color code copied to clipboard';
+  static const String copyColorTooltip = 'Copy the color code to the clipboard';
+  static const String colorCopiedSnackBar = 'Color code copied to clipboard';
 }

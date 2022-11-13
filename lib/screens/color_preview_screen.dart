@@ -3,10 +3,9 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../common/ui_strings.dart';
-import '../utils/color_utils.dart';
+import '../utils/utils.dart' as utils;
 
 class ColorPreviewScreen extends StatelessWidget {
   const ColorPreviewScreen({
@@ -16,11 +15,9 @@ class ColorPreviewScreen extends StatelessWidget {
 
   final Color color;
 
+  /// Copies the hexadecimal color code to the clipboard.
   Future<void> _onCopyPressed(BuildContext context) async {
-    final ScaffoldMessengerState messengerState = ScaffoldMessenger.of(context);
-    await Clipboard.setData(ClipboardData(text: ColorUtils.toHex(color)));
-    const SnackBar snackBar = SnackBar(content: Text(UIStrings.copiedSnackBar));
-    messengerState.showSnackBar(snackBar);
+    await utils.copyToClipboard(context, utils.colorToHex(color), UIStrings.colorCopiedSnackBar);
   }
 
   @override
@@ -28,11 +25,11 @@ class ColorPreviewScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: color,
       appBar: AppBar(
-        title: Text(ColorUtils.toHex(color)),
+        title: Text(utils.colorToHex(color)),
         actions: [
           IconButton(
             icon: const Icon(Icons.content_copy),
-            tooltip: UIStrings.copyTooltip,
+            tooltip: UIStrings.copyColorTooltip,
             onPressed: () => _onCopyPressed(context),
           ),
         ],
