@@ -1,16 +1,21 @@
 # Flutter Random Color Tester
 
-A new Flutter project.
+A basic Flutter project that tests the [flutter_randomcolor](https://pub.dev/packages/flutter_randomcolor) Dart package for generating attractive random colors.
 
-## Getting Started
+flutter_randomcolor is a Dart port of David Merfield's [randomColor](https://github.com/davidmerfield/randomColor) JavaScript utility.
 
-This project is a starting point for a Flutter application.
+Flutter Random Color Tester is actually a Flutter web app that you can run in your browser to generate dozens or hundreds of attractive random colors. You can select options to influence the type of color it produces and copy the generated colors to the clipboard for reuse in other apps or places.
 
-A few resources to get you started if this is your first Flutter project:
+Just open https://frctester.techaurelian.com in your browser to give it a try.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+  <img width="33%" src="repo-assets/screenshots/frctester-screenshot-generate.png" alt="">
+  <img width="33%" src="repo-assets/screenshots/frctester-screenshot-colors.png" alt="">
+  <img width="33%" src="repo-assets/screenshots/frctester-screenshot-color.png" alt="">
+</p>
+
+## License
+
+Flutter Random Color Tester is licensed under the [MIT license](LICENSE).
