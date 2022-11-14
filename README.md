@@ -27,7 +27,7 @@ Just open https://frctester.techaurelian.com in your browser to give it a try.
 
 1. If you don't have the Flutter SDK installed, please visit the official [Flutter](https://docs.flutter.dev/get-started/install) website.
 
-2. Fetch the latest source code from the master branch.
+2. Fetch the latest source code from the main branch.
 
 ``` 
 git clone https://github.com/TechAurelian/flutter_random_color_tester.git
@@ -46,6 +46,7 @@ flutter run
 - [Visual Studio Code](https://code.visualstudio.com/) - Code editing. Redefined.
 - [flutter_randomcolor](https://pub.dev/packages/flutter_randomcolor) - A dart package for generating attractive random colors.
 - [url_launcher](https://pub.dev/packages/url_launcher) - A Flutter plugin for launching a URL.
+- [GitHub Pages](https://pages.github.com/) - Websites for you and your projects, hosted directly from your GitHub repository.
 
 ## Contribute
 
