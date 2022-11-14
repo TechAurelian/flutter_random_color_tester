@@ -27,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final Set<ColorType> _colorTypeSet = {ColorType.random};
 
-  Luminosity _luminosity = Luminosity.random;
+  Luminosity _luminosity = Luminosity.light;
 
   void _generatePressed() {
     Options options = Options(
